@@ -1,10 +1,47 @@
-.header{
-    background-color:#ffff;
+/* General presents */
+*{
+    margin:0px;
+    padding:0px;
+    box-sizing:border-box;
+    font-family: 'Lato', sans-serif;
+    /* Amb això ens asegurem que funciona per tots els navegadors */
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    background-color:#f8f8f6; 
 }
+
 
 .logo img{
     min-width: 120px;
     max-width: 150px;
+    margin:0px;
+}
+
+.title h1{
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+/* Form titles */
+.form-group{
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+/* form check label texts*/
+
+.form-check-label{
+    font-weight: 700;
+    font-size: 0.8rem;
+}
+
+.submit button, .register button{
+    background-color: #000;
+    color:#ffff;
+
+}
+
+.form-group label{
     margin:0px;
 }
 
