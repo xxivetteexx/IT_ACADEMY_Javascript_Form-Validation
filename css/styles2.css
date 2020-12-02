@@ -1,0 +1,18 @@
+.header{
+    background-color:#ffff;
+}
+
+.logo img{
+    min-width: 120px;
+    max-width: 150px;
+    margin:0px;
+}
+
+/* Responsive margins */
+.topmargin-xs {margin-top:50px;}
+.topmargin-sm {margin-top:60px;}
+.topmargin-lg {margin-top:80px;}
+
+.bottommargin-xs {margin-bottom:50px;}
+.bottommargin-sm {margin-bottom:60px;}
+.bottommargin-lg {margin-bottom:80px;}

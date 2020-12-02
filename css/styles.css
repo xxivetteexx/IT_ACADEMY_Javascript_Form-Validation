@@ -1,0 +1,153 @@
+/************************* HEADER STARTS ************************/
+.header{
+    background-color:#ffff;
+
+}
+    .nav{
+        font-weight: 700;
+    }
+
+    .nav ul li{
+        padding:0px 20px 0px 20px;
+    }
+
+    .logo img{
+        min-width: 120px;
+        max-width: 150px;
+    }
+
+/* Navbar starts */
+
+    .nav-link{
+        color:#000;
+        position: relative;
+    }
+
+        .nav-link:hover{
+            color:#000;
+        }
+
+        .nav-link:hover:after {
+            content: "";
+            border-bottom: 1px solid #000;
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 3px;
+        }
+
+    .social a{
+        font-size:28px;
+        padding:10px;
+        color: #000;
+    }
+
+    .social a:hover{
+       color: #000;
+    }
+
+/* Burger Menu */
+    .navbar-toggler{
+        font-size:40px;
+    }
+    .navbar-toggler:focus{
+        outline: none;
+    }
+/* Navbar ends */
+
+/* Responsive margins */
+.topmargin-xs {margin-top:50px;}
+.topmargin-sm {margin-top:60px;}
+.topmargin-lg {margin-top:80px;}
+
+.bottommargin-xs {margin-bottom:50px;}
+.bottommargin-sm {margin-bottom:60px;}
+.bottommargin-lg {margin-bottom:80px;}
+
+/* Responsive margins ends*/
+
+/************************* HEADER ENDS *************************/
+
+/************************* SECTION STARTS ************************/
+.section1{
+    background-color:#f8f8f6; 
+    margin-bottom:60px;
+    padding:15px;
+}
+
+    .principal img{
+        min-height: 100px;
+        max-height: 500px;
+    }
+
+    .content-center{
+        text-align: center;
+    }
+
+/* Workshop content */
+.workshopsText p{
+    padding:0px 15px 0px 15px;
+}
+.workshop-container{
+    position: relative;
+    overflow: hidden;
+    margin:10px 0;
+}
+
+    .workshop-details{
+        position:absolute;
+        bottom:10px;
+        left:15px; 
+        z-index:9000;
+    }
+
+        .workshop-details a h2{
+            color:#ffffff;
+            font-size: 1.3rem;
+        }
+
+        .workshop-details a:hover{
+            text-decoration: none;
+        }
+
+/* Footer */
+.footer{
+    background-color: #000;
+    color:#fff;
+
+
+}
+
+    .information ul, .about ul, .faqs ul{ 
+        margin:40px 0px 40px 0px;
+        list-style: none;  
+        text-align: center;
+    }
+
+    .information a, .about a, .faqs a{
+        color:#ffff;
+        font-size: 0.80rem;    
+    }
+
+
+
+/* Media Query */
+@media (max-width: 575.98px) { 
+    h1{ font-size:40px;
+        line-height:normal;
+    }   
+    h2{ font-size:30px;
+        line-height:normal;
+    }   
+}
+
+
+@media (min-width: 576px) and (max-width: 767.98px) { ... }
+
+
+@media (min-width: 768px) and (max-width: 991.98px) { ... }
+
+
+@media (min-width: 992px) and (max-width: 1199.98px) { ... }
+
+@media (min-width: 1200px) { ... }
