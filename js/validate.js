@@ -39,16 +39,16 @@ function registerValidate2() {
 	
 	// Resgister variables
 	let inputfirstName 	= document.getElementById('inputfirstName');
-	let inputlastName 	= document.forms["myForm"]["inputlastName"];
+	let inputlastName 	= document.forms["myForm2"]["inputlastName"];
 	let inputEmail2 	= document.getElementById('inputEmail2');
-	let inputPassword2 	= document.forms["myForm"]["inputPassword2"];
-	let inputconfirmPassword = document.forms["myForm"]["inputconfirmPassword"];
-	let inputPhone 		= document.forms["myForm"]["inputPhone"];
-	let inputAddress 	= document.forms["myForm"]["inputAddress"];
-	let inputProvince	= document.forms["myForm"]["inputProvince"];
-	let inputCity		= document.forms["myForm"]["inputCity"];
-	let inputZip		= document.forms["myForm"]["inputZip"];
-	let inputregister 	= document.forms["myForm"]["gridCheck2"];
+	let inputPassword2 	= document.forms["myForm2"]["inputPassword2"];
+	let inputconfirmPassword = document.forms["myForm2"]["inputconfirmPassword"];
+	let inputPhone 		= document.forms["myForm2"]["inputPhone"];
+	let inputAddress 	= document.forms["myForm2"]["inputAddress"];
+	let inputProvince	= document.forms["myForm2"]["inputProvince"];
+	let inputCity		= document.forms["myForm2"]["inputCity"];
+	let inputZip		= document.forms["myForm2"]["inputZip"];
+	let inputregister 	= document.forms["myForm2"]["gridCheck2"];
 
 		
 	// Register validation
@@ -68,48 +68,62 @@ function registerValidate2() {
 		}
 
 		// Email 
-		if(inputEmail1.value == "") {
-			inputEmail1.classList.add("is-invalid");
-			document.getElementById("errorEmail1").textContent = "Please enter your email address";
+		if(inputEmail2.value == "") {
+			inputEmail2.classList.add("is-invalid");
+			document.getElementById("errorEmail2").textContent = "Please enter your email address";
 			acumErrores ++;
-		}else if(!validar_email(inputEmail1.value)){
-			inputEmail1.classList.add("is-invalid");
-			document.getElementById("errorEmail1").textContent = "Email is not correct";
+		}else if(!validar_email(inputEmail2.value)){
+			inputEmail2.classList.add("is-invalid");
+			document.getElementById("errorEmail2").textContent = "Email is not correct";
 			acumErrores ++;
 		}
 
-		// Password --- RESVISAR CONFRIM PASSWORD
+		// Password
 		if(inputPassword2.value == "") {
 			inputPassword2.classList.add("is-invalid");
 			document.getElementById("errorPassword2").textContent = "Plese enter your password";
+			acumErrores ++;
+		}
+
+		// Password confirmation
+		if(inputconfirmPassword == inputPassword2.value) {
+			inputconfirmPassword.classList.add("is-invalid");
+			document.getElementById("errorconfirmPassword").textContent = "The password is not correct";
+			acumErrores ++;
+		}
+		
+		// Phone
+		if(inputPhone== "") {
+			inputPhone.classList.add("is-invalid");
+			document.getElementById("errorPhone").textContent = "Plese enter your phone";
 			acumErrores ++;
 		}
 	
 		// Address 
 		if(inputAddress.value == "") {
 			inputAddress.classList.add("is-invalid");
-			document.getElementById("errorAddress").textContent = "Es campo es obligatorio";
+			document.getElementById("errorAddress").textContent = "Please enter the address";
 			acumErrores ++;
 		}
 
 		// Province 
 		if(inputProvince.value == "") {
 			inputProvince.classList.add("is-invalid");
-			document.getElementById("errorProvince").textContent = "La provincia es obligatoria";
+			document.getElementById("errorProvince").textContent = "Please enter the province";
 			acumErrores ++;
 		}
 		
 		// City 
 		if(inputCity.value == "") {
 			inputCity.classList.add("is-invalid");
-			document.getElementById("errorCity").textContent = "Falta la ciutat";
+			document.getElementById("errorCity").textContent = "Please enter the city";
 			acumErrores ++;
 		}
 
 		// Zip 
 		if(inputZip.value == "" || inputZip.length!=5) {
 			inputZip.classList.add("is-invalid");
-			document.getElementById("errorZip").textContent = "El codi postal no compleix els requisitis";
+			document.getElementById("errorZip").textContent = "Please enter the correct the zip code";
 			acumErrores ++;
 		}
 
