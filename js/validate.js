@@ -1,7 +1,9 @@
 const form = document.getElementById('myFormId');
+const form2 = document.getElementById('myFormId2');
+
 
 function registerValidate() {
-	var acumErrores = 0;
+	let acumErrores = 0;
 	
 	form.classList.remove('is-invalid');
 	
@@ -33,9 +35,9 @@ function registerValidate() {
 
 
 function registerValidate2() {
-	var acumErrores = 0;
+	let acumErrores2 = 0;
 	
-	form.classList.remove('is-invalid');
+	form2.classList.remove('is-invalid');
 	
 	// Resgister variables
 	let inputfirstName 	= document.getElementById('inputfirstName');
@@ -56,85 +58,91 @@ function registerValidate2() {
 		// Name 
 		if(inputfirstName.value == "") {
 			inputfirstName.classList.add("is-invalid");
-			document.getElementById("errorfirstName").textContent = "Plese enter your first name";
-			acumErrores ++;
+			document.getElementById("errorfirstName").textContent = "Please enter your first name";
+			acumErrores2 ++;
 		}
 
 		// Last name 
 		if(inputlastName.value == "") {
 			inputlastName.classList.add("is-invalid");
-			document.getElementById("errorlastName").textContent = "Plese enter your last name";
-			acumErrores ++;
+			document.getElementById("errorlastName").textContent = "Please enter your last name";
+			acumErrores2 ++;
 		}
 
 		// Email 
 		if(inputEmail2.value == "") {
 			inputEmail2.classList.add("is-invalid");
 			document.getElementById("errorEmail2").textContent = "Please enter your email address";
-			acumErrores ++;
+			acumErrores2 ++;
 		}else if(!validar_email(inputEmail2.value)){
 			inputEmail2.classList.add("is-invalid");
 			document.getElementById("errorEmail2").textContent = "Email is not correct";
-			acumErrores ++;
+			acumErrores2 ++;
 		}
 
 		// Password
-		if(inputPassword2.value == "") {
+		if(inputPassword2.value == ""){
 			inputPassword2.classList.add("is-invalid");
-			document.getElementById("errorPassword2").textContent = "Plese enter your password";
-			acumErrores ++;
+			document.getElementById("errorPassword2").textContent = "Please enter your password";
+			acumErrores2 ++;
 		}
 
 		// Password confirmation
-		if(inputconfirmPassword == inputPassword2.value) {
+		if(inputPassword2.value  == "" ) {
+			inputconfirmPassword.classList.add("is-invalid");
+			document.getElementById("errorconfirmPassword").textContent = "Please confirm the password";
+			acumErrores2 ++;
+		}
+		// If the password confirmation is not the same as the password
+		if( inputconfirmPassword != inputPassword2.value) {
 			inputconfirmPassword.classList.add("is-invalid");
 			document.getElementById("errorconfirmPassword").textContent = "The password is not correct";
-			acumErrores ++;
+			acumErrores2 ++;
 		}
 		
 		// Phone
-		if(inputPhone== "") {
+		if(inputPhone.value == "") {
 			inputPhone.classList.add("is-invalid");
-			document.getElementById("errorPhone").textContent = "Plese enter your phone";
-			acumErrores ++;
+			document.getElementById("errorPhone").textContent = "Please enter your phone";
+			acumErrores2 ++;
 		}
 	
 		// Address 
 		if(inputAddress.value == "") {
 			inputAddress.classList.add("is-invalid");
 			document.getElementById("errorAddress").textContent = "Please enter the address";
-			acumErrores ++;
+			acumErrores2 ++;
 		}
 
 		// Province 
 		if(inputProvince.value == "") {
 			inputProvince.classList.add("is-invalid");
 			document.getElementById("errorProvince").textContent = "Please enter the province";
-			acumErrores ++;
+			acumErrores2 ++;
 		}
 		
 		// City 
 		if(inputCity.value == "") {
 			inputCity.classList.add("is-invalid");
 			document.getElementById("errorCity").textContent = "Please enter the city";
-			acumErrores ++;
+			acumErrores2 ++;
 		}
 
 		// Zip 
 		if(inputZip.value == "" || inputZip.length!=5) {
 			inputZip.classList.add("is-invalid");
 			document.getElementById("errorZip").textContent = "Please enter the correct the zip code";
-			acumErrores ++;
+			acumErrores2 ++;
 		}
 
 		// Privacy Policy 
 		if(!gridCheck2.checked) {
 			gridCheck2.classList.add("is-invalid");
 			document.getElementById("errorCheck2").textContent = "Accept the bases";
-			acumErrores ++;
+			acumErrores2 ++;
 		}
 
-    if (acumErrores > 0){
+    if (acumErrores2 > 0){
         return false;
     }else{
 		return true;
@@ -144,6 +152,12 @@ function registerValidate2() {
 
 
 form.addEventListener('blur', (event) => {
+	console.log(event);
+	if(event.target.value!='') event.target.classList.remove('is-invalid');
+    //registerValidate();
+}, true);
+
+form2.addEventListener('blur', (event) => {
 	console.log(event);
 	if(event.target.value!='') event.target.classList.remove('is-invalid');
     //registerValidate();
