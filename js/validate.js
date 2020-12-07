@@ -4,7 +4,9 @@ const form2 = document.getElementById('myFormId2');
 
 function registerValidate() {
 	let acumErrores = 0;
-	
+	// The onsubmit button always refresh the page when we click on it, the "event.preventDefault();" stops this refresh and show up all the validations"
+	event.preventDefault();
+
 	form.classList.remove('is-invalid');
 	
 	// Login variables
@@ -36,7 +38,8 @@ function registerValidate() {
 
 function registerValidate2() {
 	let acumErrores2 = 0;
-	
+	// The onsubmit button always refresh the page when we click on it, the "event.preventDefault();" stops this refresh and show up all the validations"
+	event.preventDefault();	
 	form2.classList.remove('is-invalid');
 	
 	// Resgister variables
