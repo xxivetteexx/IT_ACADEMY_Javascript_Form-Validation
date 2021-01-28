@@ -8,6 +8,9 @@ Homepage developed with Boostrap and a Javascript form validations added
 
 
 ###### PROJECT DEMO URL : https://xxivetteexx.github.io/IT_ACADEMY_Javascript_Form-Validation/form.html
+
+###### PROJECT DEMO WITH CODEANDBOX : https://codesandbox.io/s/modest-haibt-kdhuj
+
 <hr>
 
 ### THE EXERCICE:
