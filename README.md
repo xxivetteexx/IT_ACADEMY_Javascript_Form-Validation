@@ -1,23 +1,17 @@
 # IT ACADEMY BOOSTRAP WEBSITE VALIDATION FORM
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
-Homepage developed with Boostrap and a Javascript form validations added
-
 <img width="1430" alt="Captura de Pantalla 2021-01-28 a les 20 01 58" src="https://user-images.githubusercontent.com/48102806/106185840-b211b300-61a3-11eb-9cce-77d5d08e6776.png">
 
 
-###### PROJECT DEMO URL : https://xxivetteexx.github.io/IT_ACADEMY_Javascript_Form-Validation/form.html
+### [Web](https://xxivetteexx.github.io/IT_ACADEMY_Javascript_Form-Validation/form.html) 💻
+### [Codesandbox](https://codesandbox.io/s/modest-haibt-kdhuj) ⌨️
 
-###### PROJECT DEMO WITH CODEANDBOX : https://codesandbox.io/s/modest-haibt-kdhuj
+## Getting started 🚀
+Homepage developed with Boostrap and a Javascript form validations added
 
-<hr>
+#### Level :one:
 
-### THE EXERCICE:
-
-#### LEVEL 1:
-
-```Exercice 1.```
+```Exercice 1```
 
 The aim of this is  to validate the forms on your website with Javascript. 
 Note: forms are not validated with ALERTS !! Hint: Use the "is-invalid" class with Bootstrap 4.
@@ -33,7 +27,10 @@ the standard format of emails (There is a lot of documentation)
 password repeat and a province drop-down).
 ● We leave the validation conditions in your hands.
 
+## Build with 🛠️
+* HTML5
+* CSS
+* Boostrap 4
 
-### Built With
-
-* [Bootstrap](https://getbootstrap.com)
+## Author :raising_hand_woman:
+[Ivette](https://github.com/xxivetteexx)
